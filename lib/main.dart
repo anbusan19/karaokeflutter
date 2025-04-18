@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Travellian & Karaoke',
+      title: 'KaraokeStar',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -103,7 +103,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                 child: Transform.scale(
                   scale: _scaleAnimation.value,
                   child: const Text(
-                    'Karaoke',
+                    'KaraokeStar',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 42,
@@ -131,7 +131,7 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   
   final List<Widget> _screens = [
-    const HomeScreen(),
+    HomeScreen(),
     const KaraokePlayerScreen(),
   ];
 

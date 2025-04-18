@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:karaokeflutter/karaoke_player2.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  void _navigateToKaraokePlayer2(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => KaraokePlayerScreen2()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -11,23 +19,27 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
-        children: const [
+        children: [
           SongCard(
-            albumCover: 'https://open.spotify.com/album/3lH4gaKdQ12d4OewBkaVWl',
-            songName: 'Shape of You',
-            artist: 'Ed Sheeran',
+            albumCover: 'assets/album1.jpg',
+            songName: 'Cinnamon Girl',
+            artist: 'Lana Del Rey',
           ),
           SizedBox(height: 16),
-          SongCard(
-            albumCover: 'https://example.com/album2.jpg',
-            songName: 'Uptown Funk',
-            artist: 'Mark Ronson ft. Bruno Mars',
-          ),
-          SizedBox(height: 16),
-          SongCard(
-            albumCover: 'https://example.com/album3.jpg',
-            songName: 'Rolling in the Deep',
-            artist: 'Adele',
+          GestureDetector(
+            onTap: () {
+              try {
+                _navigateToKaraokePlayer2(context);
+              } catch (e) {
+                print('Error navigating to KaraokePlayer2: $e');
+                // Handle the error appropriately, e.g., show a snackbar
+              }
+            },
+            child: SongCard(
+              albumCover: 'assets/album2.jpg',
+              songName: 'Starboy',
+              artist: 'The Weeknd ft. Daft Punk',
+            ),
           ),
         ],
       ),

@@ -31,8 +31,11 @@ dependencies:
   flutter:
     sdk: flutter
   just_audio: ^0.9.34
+  record: ^4.4.4
+  path_provider: ^2.0.15
   rxdart: ^0.27.7
   cupertino_icons: ^1.0.8
+  characters: ^1.2.1
 
 dev_dependencies:
   flutter_test:
@@ -88,11 +91,12 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package]
   assets:
-  - assets/mountain-bg.svg
-  - assets/grid-bg.svg
   - assets/Cinnamon Girl.mp3
   - assets/Cinnamon_Girl.lrc
   - assets/Karaokelogo.png
+  - assets/Starboy_Instrumental.mp3
+  - assets/album1.jpg
+  - assets/album2.jpg
 
 
 flutter_launcher_icons:
